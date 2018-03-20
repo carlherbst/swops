@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: swops-flask
+spec:
+  replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 10
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: swops-flask
+    spec:
+      containers:
+        - name: swops-flask
+          image: carlherbst/swops-flask:latest
+          ports:
+            - containerPort: 80
+              targetPort: 80

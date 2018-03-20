@@ -1,0 +1,241 @@
+[
+  {
+    "_id": "0cf149d0-2c22-11e8-bcff-85803464e43b",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Dashboard 1",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"size_x\":2,\"size_y\":2,\"panelIndex\":1,\"type\":\"visualization\",\"id\":\"0bd4abb0-2c21-11e8-bcff-85803464e43b\",\"col\":11,\"row\":1},{\"size_x\":10,\"size_y\":2,\"panelIndex\":2,\"type\":\"visualization\",\"id\":\"b0765200-2c20-11e8-bcff-85803464e43b\",\"col\":1,\"row\":1},{\"size_x\":2,\"size_y\":2,\"panelIndex\":3,\"type\":\"visualization\",\"id\":\"ec0200d0-2c20-11e8-bcff-85803464e43b\",\"col\":11,\"row\":3},{\"size_x\":10,\"size_y\":2,\"panelIndex\":4,\"type\":\"visualization\",\"id\":\"42c03060-2c1f-11e8-bcff-85803464e43b\",\"col\":1,\"row\":3},{\"size_x\":6,\"size_y\":3,\"panelIndex\":5,\"type\":\"visualization\",\"id\":\"88a887a0-2c1d-11e8-bcff-85803464e43b\",\"col\":1,\"row\":5},{\"size_x\":6,\"size_y\":3,\"panelIndex\":6,\"type\":\"visualization\",\"id\":\"0232e110-2c1e-11e8-bcff-85803464e43b\",\"col\":7,\"row\":5}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-1\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-3\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"P-6\":{\"vis\":{\"legendOpen\":false}},\"P-5\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "7fa53830-2c20-11e8-bcff-85803464e43b",
+    "_type": "search",
+    "_source": {
+      "title": "failConditions24h",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":false,\"alias\":\"flask pods\",\"type\":\"phrase\",\"key\":\"kubernetes.pod_name\",\"value\":\"swops-flask*\",\"params\":{\"query\":\"swops-flask*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"kubernetes.pod_name\":{\"query\":\"swops-flask*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":true,\"disabled\":false,\"alias\":\"not-success\",\"type\":\"phrase\",\"key\":\"log\",\"value\":\"SWOPSFLASK-Condition: 01\",\"params\":{\"query\":\"SWOPSFLASK-Condition: 01\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"SWOPSFLASK-Condition: 01\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":true,\"disabled\":false,\"alias\":\"not-sleep\",\"type\":\"phrase\",\"key\":\"log\",\"value\":\"SWOPSFLASK-Condition: 04\",\"params\":{\"query\":\"SWOPSFLASK-Condition: 04\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"SWOPSFLASK-Condition: 04\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":false,\"alias\":\"is-condition\",\"type\":\"phrase\",\"key\":\"log\",\"value\":\"SWOPSFLASK-Condition*\",\"params\":{\"query\":\"SWOPSFLASK-Condition*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"SWOPSFLASK-Condition*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "685d43a0-2c18-11e8-bcff-85803464e43b",
+    "_type": "search",
+    "_source": {
+      "title": "SWOPSFLASK-Conditions",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "@timestamp",
+        "log"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":false,\"alias\":\"swops-pods\",\"type\":\"phrase\",\"key\":\"kubernetes.pod_name\",\"value\":\"swops*\",\"params\":{\"query\":\"swops*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"kubernetes.pod_name\":{\"query\":\"swops*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":false,\"alias\":\"swopsflask-conditions\",\"type\":\"phrase\",\"key\":\"log\",\"value\":\"SWOPSFLASK-Condition*\",\"params\":{\"query\":\"SWOPSFLASK-Condition*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"SWOPSFLASK-Condition*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d2f33cb0-2c1d-11e8-bcff-85803464e43b",
+    "_type": "search",
+    "_source": {
+      "title": "sleeping",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":false,\"alias\":\"swopsflask\",\"type\":\"phrase\",\"key\":\"log\",\"value\":\"SWOPSFLASK*\",\"params\":{\"query\":\"SWOPSFLASK*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"SWOPSFLASK*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}},{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":false,\"alias\":\"sleeping\",\"type\":\"phrase\",\"key\":\"log\",\"value\":\"SWOPSFLASK-Condition: 04\",\"params\":{\"query\":\"SWOPSFLASK-Condition: 04\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"SWOPSFLASK-Condition: 04\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "171d3ac0-2c1f-11e8-bcff-85803464e43b",
+    "_type": "search",
+    "_source": {
+      "title": "failedRequests",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "statusCode",
+        "@timestamp"
+      ],
+      "sort": [
+        "statusCode",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"statusCode:[400 TO 599]\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"type\":\"phrase\",\"key\":\"kubernetes.labels.app\",\"value\":\"swops-flask\",\"params\":{\"query\":\"swops-flask\",\"type\":\"phrase\"},\"disabled\":true,\"alias\":null},\"query\":{\"match\":{\"kubernetes.labels.app\":{\"query\":\"swops-flask\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":true,\"alias\":null,\"type\":\"phrase\",\"key\":\"log\",\"value\":\"*GET*\",\"params\":{\"query\":\"*GET*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"*GET*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b0765200-2c20-11e8-bcff-85803464e43b",
+    "_type": "visualization",
+    "_source": {
+      "title": "24h Fail Conditions Histogram",
+      "visState": "{\"title\":\"24h Fail Conditions Histogram\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Past 24h Failures\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "7fa53830-2c20-11e8-bcff-85803464e43b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "42c03060-2c1f-11e8-bcff-85803464e43b",
+    "_type": "visualization",
+    "_source": {
+      "title": "All Failed Requests Histogram",
+      "visState": "{\"title\":\"All Failed Requests Histogram\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "171d3ac0-2c1f-11e8-bcff-85803464e43b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0232e110-2c1e-11e8-bcff-85803464e43b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Sleep Time",
+      "visState": "{\"title\":\"Sleep Time\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"log.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Sleep time\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "d2f33cb0-2c1d-11e8-bcff-85803464e43b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":false,\"alias\":\"swopsflask\",\"type\":\"phrase\",\"key\":\"log\",\"value\":\"SWOPSFLASK*\",\"params\":{\"query\":\"SWOPSFLASK*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"SWOPSFLASK*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "88a887a0-2c1d-11e8-bcff-85803464e43b",
+    "_type": "visualization",
+    "_source": {
+      "title": "SWOPSFLASK Condition Results",
+      "visState": "{\"title\":\"SWOPSFLASK Condition Results\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"log.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"filter\":[{\"meta\":{\"index\":\"a22bfcd0-2bef-11e8-bcff-85803464e43b\",\"negate\":false,\"disabled\":false,\"alias\":\"swopsflask\",\"type\":\"phrase\",\"key\":\"log\",\"value\":\"SWOPSFLASK*\",\"params\":{\"query\":\"SWOPSFLASK*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"log\":{\"query\":\"SWOPSFLASK*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ec0200d0-2c20-11e8-bcff-85803464e43b",
+    "_type": "visualization",
+    "_source": {
+      "title": "24h Failed Requests Counter",
+      "visState": "{\"title\":\"24h Failed Requests Counter\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"gauge\",\"gauge\":{\"verticalSplit\":false,\"autoExtend\":false,\"percentageMode\":false,\"gaugeType\":\"Metric\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"None\",\"useRange\":false,\"colorsRange\":[{\"from\":0,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":false,\"labels\":false,\"color\":\"#333\",\"width\":2},\"type\":\"simple\",\"style\":{\"fontSize\":60,\"bgColor\":false,\"labelColor\":false,\"subText\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_range\",\"schema\":\"group\",\"params\":{\"field\":\"@timestamp\",\"ranges\":[{\"from\":\"now-24h\",\"to\":\"now\"}],\"customLabel\":\"24h Request Failures\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
+      "description": "",
+      "savedSearchId": "171d3ac0-2c1f-11e8-bcff-85803464e43b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0bd4abb0-2c21-11e8-bcff-85803464e43b",
+    "_type": "visualization",
+    "_source": {
+      "title": "24h Fail Conditions Counter",
+      "visState": "{\"title\":\"24h Fail Conditions Counter\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"gauge\",\"gauge\":{\"verticalSplit\":false,\"autoExtend\":false,\"percentageMode\":false,\"gaugeType\":\"Metric\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"None\",\"useRange\":false,\"colorsRange\":[{\"from\":0,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":false,\"labels\":false,\"color\":\"#333\",\"width\":2},\"type\":\"simple\",\"style\":{\"fontSize\":60,\"bgColor\":false,\"labelColor\":false,\"subText\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_range\",\"schema\":\"group\",\"params\":{\"field\":\"@timestamp\",\"ranges\":[{\"from\":\"now-24h\",\"to\":\"now\"}],\"customLabel\":\"24h Fail Conditions\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
+      "description": "",
+      "savedSearchId": "7fa53830-2c20-11e8-bcff-85803464e43b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "bea77de0-2c25-11e8-bcff-85803464e43b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flask Activity",
+      "visState": "{\"title\":\"Flask Activity\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Flask Activity\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "685d43a0-2c18-11e8-bcff-85803464e43b",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  }
+]

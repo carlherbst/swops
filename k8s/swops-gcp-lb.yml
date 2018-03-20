@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: swops-ingress
+spec:
+  rules:
+  - host: $GCP_DOMAIN_NAME
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: swops-flask
+          servicePort: 80
+      - path: /kibana
+        backend:
+          serviceName: kibana
+          servicePort: 80

@@ -1,0 +1,4 @@
+swops-flask:
+  image: carlherbst/swops-flask:latest
+  ports:
+   - "80:80"
